@@ -163,7 +163,7 @@ def main(message):
         di = primus_versus(url_primus)
     for title in di:
         title1 = title.lower().translate(str.maketrans('', '', string.punctuation))
-        if title1.find(message) != -1 or (title.find(words[0]) != -1 and title.find(words[1]) != -1):
+        if title1.find(message) != -1 or (title.find(words[0]) != 1 and title.find(words[-1]) != 1):
             price = '\nЦена: ' + di[title][0]
             num = '\nВ наличии: ' + di[title][1]
             theme = '\nКатегория: ' + di[title][2]
